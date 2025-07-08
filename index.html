@@ -1587,7 +1587,8 @@ v37: '12px'
 });
 v390();  
     v392();
-    function initDefaultValues() {
+    v394();
+    function v400() {
         const v354 = v348(v17, v16);
         document.getElementById('info-divisions').textContent = v17;
         document.getElementById('info-reduction').textContent = `1:${v16}`;
@@ -1608,7 +1609,7 @@ v390();
         document.getElementById('popup-crans-input').value = v14;
         document.getElementById('division-number-input').value = v17;
     }
-    initDefaultValues(); 
+    v400(); 
 v169();
 v170();
 v171();
@@ -2830,6 +2831,30 @@ function v390() {
     
     document.querySelector('.main-view').appendChild(v391);
     return v391;
+}
+function v394() {
+    const v395 = document.createElement('div');
+    v395.id = 'signature-display';
+    v395.style.cssText = `
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(128, 128, 128, 0.8);
+        color: white;
+        padding: 6px 10px;
+        border-radius: 4px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        z-index: 1000;
+        pointer-events: none;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    `;
+    
+    v395.textContent = atob("NTlqYWc=");
+    document.querySelector('.main-view').appendChild(v395);
+    return v395;
 }
 window.addEventListener('click', function(v330) {
 const v389 = document.getElementById('division-info-popup');
